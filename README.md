@@ -1,4 +1,4 @@
-# Bidex_VisionPro_Teleop
+# Bidex/LEAP Hand VisionPro Teleop
 This is based off of [VisionProTeleop](https://github.com/Improbable-AI/VisionProTeleop) by Younghyo Park et. al. which streams the Apple Vision Pro data over the network to a Python script.
 
 We then run inverse kinematics using Pybullet and output LEAP Hand joint angles.
