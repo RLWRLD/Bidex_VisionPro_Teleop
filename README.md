@@ -13,6 +13,8 @@ Please follow [VisionProTeleop](https://github.com/Improbable-AI/VisionProTeleop
 
 Then, clone this repo on an Ubuntu machine w/ Python connected to the same network as the Apple Vision Pro.
 ```
+git clone https://github.com/leap-hand/Bidex_VisionPro_Teleop
+
 pip install avp_stream numpy pybullet 
 ```
 
