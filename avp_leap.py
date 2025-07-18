@@ -17,12 +17,12 @@ Inspired by Dexcap https://dex-cap.github.io/ by Wang et. al. and Robotic Teleki
 '''
 
 #Set this to your IP address of you AVP
-AVP_IP = "172.26.16.138"
+AVP_IP = "172.30.1.98"  # RLWRLD robot lab
 
 class Leapv1PybulletIKPython():
-    def __init__(self, is_left = True):
+    def __init__(self, vps, is_left = True):
         #start AVP         
-        self.vps = VisionProStreamer(ip = AVP_IP, record = True)
+        self.vps = vps
         # start pybullet
         #clid = p.connect(p.SHARED_MEMORY)
         #clid = p.connect(p.DIRECT)
@@ -184,7 +184,8 @@ class Leapv1PybulletIKPython():
         return [float(i) for i in real_robot_hand_q]
 
 if __name__ == "__main__":
-    pbik = Leapv1PybulletIKPython()
+    vps = VisionProStreamer(ip = AVP_IP, record = True)
+    pbik = Leapv1PybulletIKPython(vps, is_left=False)
     while True:
         output_joints = pbik.get_avp_data()
         print(output_joints)  ##This is the 16 dimensional LEAP Hand vector  Feed this into your python or ROS1/ROS2 code.  Ordering is the same!

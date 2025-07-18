@@ -18,6 +18,8 @@ git clone https://github.com/leap-hand/Bidex_VisionPro_Teleop
 pip install avp_stream numpy pybullet 
 ```
 
+로봇랩 AVP (RW-RB-0100) ip: 172.30.1.98
+
 ## How to Use
 First wear the VisionPro and launch the VisionPro app, copy the IP address into AVP_IP in `avp_leap.py`  Now run our code:
 ```
